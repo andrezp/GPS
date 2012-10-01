@@ -9,12 +9,12 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="cordova-1.6.0.js"></script>
 
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=true"></script>
 <script type="text/javascript">
 
 // Determine support for Geolocation and get location or give error
 if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(displayPosition, errorFunction);
+    navigator.geolocation.getCurrentPosition(displayPosition, errorFunction, {enableHighAccuracy:true});
 } else {
     alert('It seems like Geolocation, which is required for this page, is not enabled in your browser. Please use a browser which supports it.');
 }
